@@ -2,30 +2,22 @@ package mwieduwi.games.circlegame.frontend;
 
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import java.awt.Color;
 
 public class GUIField extends JPanel {
 
-    private int x, y;
-
     public GUIField() {
         this.setVisible(true);
+        
     }
 
-    // public int getY() {
-    //     return y;
-    // }
+    public void setColor(Color color) {
+        this.setBackground(color);
+        this.setOpaque(true);
+        
 
-    // public void setY(int y) {
-    //     this.y = y;
-    // }
-
-    // public int getX() {
-    //     return x;
-    // }
-
-    // public void setX(int x) {
-    //     this.x = x;
-    // }
+        System.out.println("Color is: " + this.getBackground().toString());
+    }
 
     @Override
     public void paint(Graphics g) {

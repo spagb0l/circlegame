@@ -1,6 +1,7 @@
 package mwieduwi.games.circlegame.controller;
 
 import javax.swing.SwingUtilities;
+import java.awt.Color;
 
 import mwieduwi.games.circlegame.backend.Game;
 import mwieduwi.games.circlegame.frontend.GUI;
@@ -15,11 +16,18 @@ public class GUIController {
         setGui(gui);
         
         setFieldSize();
-        paintCircle();
+        
+        setColor(Color.CYAN);
+
+        refreshUI();
     }
 
-    public void paintCircle() {
+    private void refreshUI() {
         SwingUtilities.updateComponentTreeUI(getGui());
+    }
+
+    private void setColor(Color color) {
+        getGui().getField().setColor(color);
     }
 
     private void setFieldSize() {
