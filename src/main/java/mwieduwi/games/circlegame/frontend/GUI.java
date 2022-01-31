@@ -18,17 +18,9 @@ public class GUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-
-        openField();
     }
 
     public GUIField getField() {
         return field;
-    }
-
-    private void openField() {
- 
-
-        field.setVisible(true);
     }
 }

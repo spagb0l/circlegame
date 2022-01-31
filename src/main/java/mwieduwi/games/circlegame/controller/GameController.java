@@ -10,8 +10,6 @@ public class GameController {
         setGame(game);
     }
 
-    
-
     public Game getGame() {
         return game;
     }

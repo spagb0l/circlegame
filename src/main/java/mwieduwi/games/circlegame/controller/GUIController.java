@@ -19,11 +19,19 @@ public class GUIController {
         
         setColor(Color.CYAN);
 
+        drawCircle();
+
         refreshUI();
     }
 
     private void refreshUI() {
         SwingUtilities.updateComponentTreeUI(getGui());
+    }
+
+    private void drawCircle() {
+        getGui().getField().setCircleX(100);
+        getGui().getField().setCircleY(100);
+        getGui().getField().setCircleDiameter(80);
     }
 
     private void setColor(Color color) {
