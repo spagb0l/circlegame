@@ -3,9 +3,9 @@ package mwieduwi.games.circlegame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import mwieduwi.games.circlegame.backend.Game;
 import mwieduwi.games.circlegame.controller.GUIController;
 import mwieduwi.games.circlegame.controller.GameController;
+import mwieduwi.games.circlegame.domain.Game;
 import mwieduwi.games.circlegame.frontend.GUI;
 
 public class App 

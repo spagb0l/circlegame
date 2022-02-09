@@ -1,4 +1,4 @@
-package mwieduwi.games.circlegame.backend;
+package mwieduwi.games.circlegame.domain;
 
 public class Field {
 

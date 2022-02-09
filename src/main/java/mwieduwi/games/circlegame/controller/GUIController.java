@@ -3,13 +3,15 @@ package mwieduwi.games.circlegame.controller;
 import javax.swing.SwingUtilities;
 import java.awt.Color;
 
-import mwieduwi.games.circlegame.backend.Game;
+import mwieduwi.games.circlegame.domain.Circle;
+import mwieduwi.games.circlegame.domain.Game;
 import mwieduwi.games.circlegame.frontend.GUI;
 
 public class GUIController {
 
     private Game game;
     private GUI gui;
+    
 
     public GUIController(Game game, GUI gui) {
         setGame(game);
@@ -19,7 +21,7 @@ public class GUIController {
         
         setColor(Color.CYAN);
 
-        drawCircle();
+        drawAllCircles();
 
         refreshUI();
     }
@@ -28,10 +30,16 @@ public class GUIController {
         SwingUtilities.updateComponentTreeUI(getGui());
     }
 
-    private void drawCircle() {
-        getGui().getField().setCircleX(100);
-        getGui().getField().setCircleY(100);
-        getGui().getField().setCircleDiameter(80);
+    private void drawAllCircles() {
+        for(Circle circle : getGame().getCircleList()) {
+            drawCircle(circle.getX(), circle.getY(), circle.getDiameter());
+        }
+    }
+
+    private void drawCircle(int x, int y, int diameter) {
+        getGui().getField().setCircleX(x);
+        getGui().getField().setCircleY(y);
+        getGui().getField().setCircleDiameter(diameter);
     }
 
     private void setColor(Color color) {

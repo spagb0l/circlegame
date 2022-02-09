@@ -1,4 +1,4 @@
-package mwieduwi.games.circlegame.backend;
+package mwieduwi.games.circlegame.domain;
 
 import java.util.ArrayList;
 
@@ -12,10 +12,10 @@ public class Game {
         setField(new Field(720, 720));
         setCircleList(new ArrayList<>());
 
-        drawFirstCircle();
+        setCircles();
     }
 
-    private void drawFirstCircle() {
+    private void setCircles() {
         circleList.add(new Circle(100, 100, 80));
     }
 

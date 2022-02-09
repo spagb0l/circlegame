@@ -1,6 +1,6 @@
 package mwieduwi.games.circlegame.controller;
 
-import mwieduwi.games.circlegame.backend.Game;
+import mwieduwi.games.circlegame.domain.Game;
 
 public class GameController {
 
